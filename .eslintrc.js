@@ -17,7 +17,7 @@ module.exports = {
       version: 'detect',
     },
   },
-  plugins: ['react', '@typescript-eslint'],
+  plugins: ['react', 'react-hooks', '@typescript-eslint'],
   rules: {
     semi: 'off',
     'comma-dangle': ['error', 'only-multiline'],
@@ -25,5 +25,7 @@ module.exports = {
     'no-use-before-define': 'off',
     '@typescript-eslint/no-use-before-define': ['error'],
     'react/prop-types': 'off',
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'warn',
   },
 }
