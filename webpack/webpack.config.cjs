@@ -6,6 +6,7 @@ const terserPlugin = require('terser-webpack-plugin')
 const htmlWebpackPlugin = require('html-webpack-plugin')
 const eslintWebpackPlugin = require('eslint-webpack-plugin')
 const miniCssExtractPlugin = require('mini-css-extract-plugin')
+const cssMinimizerWebpackPlugin = require('css-minimizer-webpack-plugin')
 const headerMessage = require('./scripts/header-message.cjs')
 
 const ROOT_DIR_PATH = path.resolve(__dirname, '..')
@@ -64,6 +65,7 @@ module.exports = (env, argv) => {
           },
           extractComments: 'all',
         }),
+        new cssMinimizerWebpackPlugin(),
       ],
     },
     plugins: [
