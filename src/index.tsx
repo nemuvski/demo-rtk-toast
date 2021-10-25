@@ -4,6 +4,7 @@ import { Provider } from 'react-redux'
 import { store } from '~/stores/store'
 import App from '~/components/App'
 
+import '~/styles/animation.css'
 import '~/styles/global.css'
 import '~/styles/toaster.css'
 import '~/styles/toast.css'
