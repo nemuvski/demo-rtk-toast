@@ -11,7 +11,7 @@ const Toaster = () => {
   }
 
   return (
-    <div>
+    <div className='toaster'>
       {toasts.map(({ id }) => (
         <Toast key={id} toastId={id} />
       ))}

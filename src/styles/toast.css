@@ -1,0 +1,30 @@
+.toast {
+  width: 100%;
+  margin-bottom: 1.5rem;
+  padding: 0.75rem 1rem;
+  line-height: 1.25;
+}
+
+.toast.success {
+  box-shadow: 0.25rem 0.25rem var(--color-success-dark);
+  background-color: var(--color-success-main);
+  color: var(--color-success-light);
+}
+
+.toast.info {
+  box-shadow: 0.25rem 0.25rem var(--color-info-dark);
+  background-color: var(--color-info-main);
+  color: var(--color-info-light);
+}
+
+.toast.warning {
+  box-shadow: 0.25rem 0.25rem var(--color-warning-dark);
+  background-color: var(--color-warning-main);
+  color: var(--color-warning-light);
+}
+
+.toast.error {
+  box-shadow: 0.25rem 0.25rem var(--color-error-dark);
+  background-color: var(--color-error-main);
+  color: var(--color-error-light);
+}

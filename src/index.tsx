@@ -4,6 +4,10 @@ import { Provider } from 'react-redux'
 import { store } from '~/stores/store'
 import App from '~/components/App'
 
+import '~/styles/global.css'
+import '~/styles/toaster.css'
+import '~/styles/toast.css'
+
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>

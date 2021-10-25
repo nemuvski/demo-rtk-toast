@@ -13,14 +13,14 @@ const Toast: React.FC<Props> = ({ toastId }) => {
   const toast = useSelector(selectToast(toastId))
   const { removeToast } = useToast()
 
-  // 一定時間後に削除する
+  // 一定時間経過後に削除する
   useTimeout(() => removeToast(toastId), TOAST_DISPLAY_DURATION)
 
   if (!toast) {
     return null
   }
 
-  return <div>{toast.content}</div>
+  return <div className={`toast ${toast.level}`}>{toast.content}</div>
 }
 
 export default Toast

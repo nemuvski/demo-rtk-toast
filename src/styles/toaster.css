@@ -1,0 +1,11 @@
+.toaster {
+  z-index: 10;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 3rem;
+  padding: 0 1rem;
+  transform: translateX(-50%);
+}
