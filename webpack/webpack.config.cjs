@@ -9,6 +9,7 @@ const miniCssExtractPlugin = require('mini-css-extract-plugin')
 const cssMinimizerWebpackPlugin = require('css-minimizer-webpack-plugin')
 const headerMessage = require('./scripts/header-message.cjs')
 
+const PUBLIC_PATH = '/'
 const ROOT_DIR_PATH = path.resolve(__dirname, '..')
 const SRC_DIR_PATH = path.join(ROOT_DIR_PATH, 'src')
 const STATIC_DIR_PATH = path.join(ROOT_DIR_PATH, 'static')
@@ -34,6 +35,7 @@ module.exports = (env, argv) => {
     },
     output: {
       path: OUTPUT_DIR_PATH,
+      publicPath: PUBLIC_PATH,
       filename: '[name].[contenthash].js',
       assetModuleFilename: 'images/[hash][ext][query]',
     },
@@ -90,6 +92,7 @@ module.exports = (env, argv) => {
         template: path.join(SRC_DIR_PATH, 'index.html'),
         // テンプレートで利用する変数
         APP_VERSION: appVersion,
+        PUBLIC_PATH,
       }),
       new eslintWebpackPlugin({
         extensions: ['ts', 'tsx', 'js', 'jsx'],
@@ -100,6 +103,13 @@ module.exports = (env, argv) => {
     ],
     devServer: {
       port: DEV_SERVER_PORT,
+      historyApiFallback: true,
+      client: {
+        overlay: {
+          warnings: false,
+          errors: true,
+        },
+      },
     },
   }
 }
