@@ -20,7 +20,7 @@ const DEV_SERVER_PORT = 3000
 module.exports = (env, argv) => {
   const mode = argv.mode
   const isProductionMode = mode === 'production'
-  const appVersion = isProductionMode ? env.version : `${env.version}-${mode}`
+  const appVersion = isProductionMode ? process.env.npm_package_version : `${process.env.npm_package_version}-${mode}`
 
   headerMessage(mode, appVersion)
 
