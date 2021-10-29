@@ -6,8 +6,8 @@
     "clean": "rimraf dist",
     "eslint:check": "eslint --ext .js,.jsx,.ts,.tsx .",
     "prettier:check": "prettier --check './**/*.{js,jsx,ts,tsx}'",
-    "start": "webpack serve --mode=development --config=webpack/webpack.config.cjs --env version=\"$npm_package_version.`git rev-parse --short HEAD`\"",
-    "build": "yarn clean && webpack build --mode=production --config=webpack/webpack.config.cjs --env version=\"$npm_package_version.`git rev-parse --short HEAD`\""
+    "start": "webpack serve --mode=development --config=webpack/webpack.config.cjs",
+    "build": "yarn clean && webpack build --mode=production --config=webpack/webpack.config.cjs"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.6.2",
