@@ -21,7 +21,7 @@ module.exports = {
   rules: {
     semi: 'off',
     'comma-dangle': ['error', 'only-multiline'],
-    'multiline-ternary': ['error', 'always'],
+    'multiline-ternary': ['error', 'always-multiline'],
     'no-use-before-define': 'off',
     '@typescript-eslint/no-use-before-define': ['error'],
     'react/prop-types': 'off',

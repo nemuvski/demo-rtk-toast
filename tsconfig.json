@@ -4,7 +4,7 @@
     "paths": {
       "~/*": ["src/*"]
     },
-    "target": "es5",
+    "target": "esnext",
     "jsx": "react-jsx",
     "module": "esnext",
     "moduleResolution": "node",
@@ -16,6 +16,7 @@
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
+    "useDefineForClassFields": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
