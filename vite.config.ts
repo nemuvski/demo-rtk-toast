@@ -39,5 +39,10 @@ export default defineConfig(({ mode }) => {
     resolve: {
       alias: [{ find: '~', replacement: ROOT_DIR_PATH }],
     },
+    // Vitest configuration
+    test: {
+      environment: 'happy-dom',
+      testTimeout: 10000,
+    },
   }
 })
