@@ -2,4 +2,4 @@
 
 Redux (Redux Toolkit) でToast UIを作成するデモです。
 
-![スクリーンショット](screenshot.png)
+<img src="capture.gif" width="400" />
